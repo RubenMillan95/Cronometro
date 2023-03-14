@@ -29,13 +29,20 @@ function cronometro(){
         fecha2=new Date();
     }while(fecha2-fecha<1000);
 
-    //Función asincrona
+    //Función asincrona y Call back
+    setTimeout(function(){console.log(hora+":"+ minuto + ":" + segundo)}, 1000);
+
+    //setTimeout(call, 1000);
+
+    //otro retraso de 1 segundo
+    //Promise: objeto que representa la ejecución 
+    //de una función asincrona
+    new Promise(r=>setTimeout(r, 1000));
+
+    //setTimeout(()=>{}, 1000);
 
 
 
-
-
-    console.log(hora+":"+ minuto + ":" + segundo);
 
    }
 }
